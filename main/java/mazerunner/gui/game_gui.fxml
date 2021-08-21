@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="600.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mazerunner.gui.Controller">
+   <center>
+      <GridPane fx:id="gameGridPane" gridLinesVisible="true" BorderPane.alignment="CENTER">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+      </GridPane>
+   </center>
+   <left>
+      <VBox prefHeight="600.0" prefWidth="210.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox>
+               <padding>
+                  <Insets left="8.0" top="10.0" />
+               </padding></VBox>
+          <Button alignment="CENTER" mnemonicParsing="false" prefHeight="26.0" prefWidth="138.0" text="Save" />
+            <Button alignment="CENTER" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="139.0" text="Load" />
+            <ButtonBar minWidth="-Infinity" prefHeight="244.0" prefWidth="154.0">
+              <buttons>
+                <Button alignment="CENTER" minWidth="24.0" mnemonicParsing="false" onAction="#moveLeft" prefHeight="26.0" text="LEFT" translateX="50.0" />
+                  <Button alignment="CENTER" layoutX="66.0" layoutY="17.0" minWidth="24.0" mnemonicParsing="false" onAction="#moveRight" prefHeight="26.0" text="RIGHT" translateX="100.0" />
+                  <Button alignment="CENTER" contentDisplay="CENTER" layoutX="117.0" layoutY="126.0" minWidth="24.0" mnemonicParsing="false" onAction="#moveUp" prefHeight="26.0" text="UP" translateX="-60.0" translateY="-50.0" />
+                  <Button alignment="CENTER" layoutX="202.0" layoutY="126.0" minWidth="24.0" mnemonicParsing="false" onAction="#moveDown" prefHeight="26.0" text="DOWN" translateX="-145.0" translateY="50.0" />
+              </buttons>
+            </ButtonBar>
+            <Label text="Difficulty:" />
+            <TextField fx:id="difficultyTextField" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="28.0" prefWidth="170.0" />
+            <Button fx:id="startButton" mnemonicParsing="false" onAction="#startGameAction" text="Start Game!" />
+            <TextArea fx:id="displayStats" prefHeight="200.0" prefWidth="200.0" />
+            <Button fx:id="showHelp" mnemonicParsing="false" onAction="#showHelp" prefHeight="16.0" prefWidth="41.0" text="Help" />
+         </children>
+         <padding>
+            <Insets bottom="8.0" />
+         </padding></VBox>
+   </left>
+</BorderPane>
